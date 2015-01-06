@@ -2,12 +2,12 @@
 
 if ($info) {
 
-    $token = $info.CommandLine -split "  "
+    $token = $info.CommandLine -split "ServerToken"
     $desktop = [Environment]::GetFolderPath("Desktop")
     $WshShell = New-Object -ComObject WScript.Shell
     $Shortcut = $WshShell.CreateShortcut($desktop + '\Elite Launcherless.lnk')
     $Shortcut.TargetPath = $info.Path
-    $Shortcut.Arguments = $token[1]
+    $Shortcut.Arguments = '"ServerToken ' + $token[1]
     $Shortcut.WorkingDirectory = $info.Path | Split-Path
     $Shortcut.Save()
 
