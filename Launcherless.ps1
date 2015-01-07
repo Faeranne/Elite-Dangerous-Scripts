@@ -1,4 +1,6 @@
-﻿$info =  Get-WmiObject Win32_Process -Filter "name = 'EliteDangerous32.exe'"
+﻿'Powershell version: ' + $PSVersionTable.PSVersion.Major
+
+$info =  Get-WmiObject Win32_Process -Filter "name = 'EliteDangerous32.exe'"
 
 $process = Get-Process EliteDangerous32
 
