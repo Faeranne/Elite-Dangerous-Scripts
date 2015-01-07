@@ -2,9 +2,7 @@
 
 $info =  Get-WmiObject Win32_Process -Filter "name = 'EliteDangerous32.exe'"
 
-$process = Get-Process EliteDangerous32
-
-$path = $process.Path
+$path = $info.Path
 #Override with a verbatim path in quotes if path is empty, like so:
 #$path = 'C:\Program Files (x86)\Frontier\EDLaunch\Products\FORC-FDEV-D-1003\EliteDangerous32.exe'
 
@@ -21,5 +19,5 @@ if ($info) {
 
     'Done!'
 } else {
-    'Error: Launch Elite Dangerous first.'
+    Write-Host 'Error: Launch Elite Dangerous first.' -ForegroundColor Red
 }

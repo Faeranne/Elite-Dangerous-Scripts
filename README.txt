@@ -4,6 +4,6 @@ Usage:
 
 0) Download and extract the script.
 1) Start Elite: Dangerous using the official launcher. Alt-tab back.
-2) Run start.bat
+2) Start run.cmd
 
 A new shortcut will be saved on your Desktop named 'Elite Launcherless' that contains your auth token.
