@@ -7,12 +7,12 @@ $info =  Get-WmiObject Win32_Process -Filter "name = 'EliteDangerous32.exe'"
 
 $path = $info.Path
 
-if (!path) {
-    Write-Host "Failed to get the path to the executable from the process" -ForegroundColor Red
-    $path = Read-Host 'Please copy and paste the full path to the EliteDangerous32.exe here and press Enter'
-}
-
 if ($info) {
+
+    if (!path) {
+        Write-Host "Failed to get the path to the executable from the process" -ForegroundColor Red
+        $path = Read-Host 'Please copy and paste the full path to the EliteDangerous32.exe here and press Enter'
+    }
 
     $token = $info.CommandLine -split "ServerToken"
     $desktop = [Environment]::GetFolderPath("Desktop")
