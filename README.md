@@ -2,7 +2,7 @@ Launcherless.ps1 - Powershell script that creates a shortcut, allows to skip the
 
 Usage:
 
-1. Download and extract the script.
+1. [Download](https://github.com/xaduha/Elite-Dangerous-Scripts/archive/master.zip) and extract the script.
 2. Start Elite: Dangerous using the official launcher. Alt-tab back.
 3. Start run.cmd
 
