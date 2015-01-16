@@ -9,9 +9,11 @@ $path = $info.Path
 
 if ($info) {
 
-    if (!path) {
+    if (!$path) {
         Write-Host "Failed to get the path to the executable from the process" -ForegroundColor Red
-        $path = Read-Host 'Please copy and paste the full path to the EliteDangerous32.exe here and press Enter'
+        Write-Host "Please copy and paste the full path to the EliteDangerous32.exe here and press Enter" -ForegroundColor Red
+        Write-Host "Example > D:\Games\EDLaunch\Products\FORC-FDEV-D-1003\EliteDangerous32.exe" -ForegroundColor Red
+        $path = Read-Host "Fullpath > "
     }
 
     $token = $info.CommandLine -split "ServerToken"
