@@ -1,9 +1,4 @@
-﻿if ($PSVersionTable.PSVersion.Major -lt 3) {
-  Write-Host "Powershell 3 or higher is required, please follow link [1] in the description" -ForegroundColor Red
-  exit
-}
-
-$info =  Get-WmiObject Win32_Process -Filter "name = 'EliteDangerous32.exe'"
+﻿$info =  Get-WmiObject Win32_Process -Filter "name = 'EliteDangerous32.exe'"
 
 $path = $info.Path
 
